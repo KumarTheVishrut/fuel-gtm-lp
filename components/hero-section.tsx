@@ -128,7 +128,7 @@ export function LogosSection() {
   return (
     <section className="relative space-y-5 border-t border-white/10 pt-8 pb-12">
       <p className="text-center font-mono text-xs tracking-[0.25em] uppercase text-white/35">
-        We operate across the modern tech stack
+        Trusted By 
       </p>
       <div className="relative z-10 mx-auto max-w-4xl">
         <LogoCloud logos={logos} />
