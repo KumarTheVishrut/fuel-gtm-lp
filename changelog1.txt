@@ -1,0 +1,23 @@
+Changes to be made on the website
+
+1) Use the font class below for the website
+
+
+interVariable, "interVariable Fallback", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+
+
+
+Font Family: interVariable, "interVariable Fallback", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+Font Size: 16px
+Font Color: rgb(237, 242, 245)
+Font Style: normal
+Font Weight: 400
+
+
+2) Change dons email to don@fuel-bd.com
+
+3) Create a About section (could maybe get with founder on that and see what kind of story he wants to tell about the fruition of business) 
+
+
+
+

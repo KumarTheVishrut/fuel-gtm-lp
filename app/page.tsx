@@ -112,8 +112,9 @@ const fuelServiceCards: DisplayCardProps[] = [
     date: "01",
     iconClassName: "text-white/35",
     titleClassName: "text-white",
+    x: 0, y: 0, hoverY: -40,
     className: [
-      "[grid-area:stack] hover:-translate-y-10",
+      "[grid-area:stack]",
       "before:absolute before:w-[100%] before:outline-1 before:outline-border",
       "before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-black/60",
       "before:left-0 before:top-0",
@@ -127,8 +128,9 @@ const fuelServiceCards: DisplayCardProps[] = [
     date: "02",
     iconClassName: "text-white/35",
     titleClassName: "text-white",
+    x: 32, y: 32, hoverY: -4,
     className: [
-      "[grid-area:stack] translate-x-8 translate-y-8 hover:-translate-y-1",
+      "[grid-area:stack]",
       "before:absolute before:w-[100%] before:outline-1 before:outline-border",
       "before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-black/45",
       "before:left-0 before:top-0",
@@ -142,8 +144,9 @@ const fuelServiceCards: DisplayCardProps[] = [
     date: "03",
     iconClassName: "text-white/35",
     titleClassName: "text-white",
+    x: 64, y: 64, hoverY: -4,
     className: [
-      "[grid-area:stack] translate-x-16 translate-y-16 hover:-translate-y-1",
+      "[grid-area:stack]",
       "before:absolute before:w-[100%] before:outline-1 before:outline-border",
       "before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-black/25",
       "before:left-0 before:top-0",
@@ -157,8 +160,8 @@ const fuelServiceCards: DisplayCardProps[] = [
     date: "04",
     iconClassName: "text-white/35",
     titleClassName: "text-white",
-    className:
-      "[grid-area:stack] translate-x-24 translate-y-24 hover:translate-y-14",
+    x: 96, y: 96, hoverY: 56,
+    className: "[grid-area:stack]",
   },
 ];
 
@@ -194,8 +197,8 @@ export default function Home() {
             FUEL
           </motion.span>
           <a
-            href="mailto:donp@fuel-bd.com"
-            className="px-5 py-2 bg-white text-black text-xs font-bold tracking-[0.15em] hover:bg-black hover:text-white border border-white transition-colors duration-200"
+            href="mailto:don@fuel-bd.com"
+            className="px-5 py-2 bg-white text-black text-xs font-mono font-bold tracking-[0.15em] hover:bg-black hover:text-white border border-white transition-colors duration-200"
           >
             CONSULT
           </a>
@@ -255,15 +258,64 @@ export default function Home() {
                 >
                   <div style={{ color: "rgba(255,255,255,0.45)" }}>{icon}</div>
                   <div>
-                    <h2 className="text-lg font-black tracking-[0.08em] uppercase mb-3 leading-tight">
+                    <h2 className="text-lg font-semibold tracking-[-0.02em] uppercase mb-3 leading-tight">
                       {title}
                     </h2>
-                    <p className="font-mono text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
+                    <p className="font-mono text-xs leading-relaxed" style={{ color: "#888888" }}>
                       {body}
                     </p>
                   </div>
                 </TiltCard>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── SECTION 2b: ABOUT / FOUNDER ── */}
+      <section id="about" className="py-28 px-6 border-b border-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            <motion.p
+              variants={fadeUp}
+              custom={0}
+              className="font-mono text-xs tracking-[0.3em] uppercase mb-12"
+              style={{ color: "rgba(237,242,245,0.35)" }}
+            >
+              — About
+            </motion.p>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <motion.div variants={fadeUp} custom={1}>
+                <h2
+                  className="font-semibold uppercase leading-[0.95] tracking-[-0.02em] mb-6"
+                  style={{ fontSize: "clamp(2.5rem,5vw,4.5rem)" }}
+                >
+                  BUILT FROM THE<br />TRENCHES.
+                </h2>
+              </motion.div>
+
+              <motion.div variants={fadeUp} custom={2} className="flex flex-col gap-6 pt-2">
+                <p
+                  className="font-mono text-sm leading-relaxed"
+                  style={{ color: "rgba(237,242,245,0.5)" }}
+                >
+                  Founder story to be finalized — coordinate with Don on the origin of FUEL,
+                  the key frontline experiences that shaped the firm, and the vision behind
+                  building a GTM consultancy rooted in direct operator intelligence.
+                </p>
+                <p
+                  className="font-mono text-sm leading-relaxed"
+                  style={{ color: "rgba(237,242,245,0.35)" }}
+                >
+                  [Placeholder — pending founder input]
+                </p>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -291,7 +343,7 @@ export default function Home() {
             <motion.h2
               variants={fadeUp}
               custom={1}
-              className="font-black leading-[0.95] tracking-tight uppercase mb-10"
+              className="font-semibold leading-[0.95] tracking-[-0.02em] uppercase mb-10"
               style={{ fontSize: "clamp(2.5rem,6vw,5.5rem)" }}
             >
               Intelligence<br />from the<br />Frontlines.
@@ -314,7 +366,7 @@ export default function Home() {
       {/* ── SECTION 4: STRATEGIC SERVICES ── */}
       {/* No overflow-hidden — the stacked cards translate outside the grid area.
           overflow-x: hidden on body (globals.css) prevents horizontal scroll. */}
-      <section className="pt-28 pb-56 px-6 border-b border-white">
+      <section className="pt-28 pb-28 lg:pb-56 px-6 border-b border-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             variants={stagger}
@@ -352,20 +404,20 @@ export default function Home() {
                     >
                       {num}
                     </span>
-                    <span className="text-2xl font-black uppercase tracking-tight leading-tight">
+                    <span className="text-2xl font-semibold uppercase tracking-[-0.02em] leading-tight">
                       {label}
                     </span>
                   </motion.div>
                 ))}
               </div>
 
-              {/* Right: stacked DisplayCards interactive visual.
-                  pb-24 pr-24 gives the translated cards (translate-x/y-24 = 96px)
-                  space to paint without being clipped by the flex container. */}
+              {/* Right: stacked DisplayCards — desktop only.
+                  Cards are 22rem wide + 96px translate offset; too wide for mobile.
+                  The numbered list above already communicates all four services. */}
               <motion.div
                 variants={fadeUp}
                 custom={5}
-                className="w-full lg:w-auto flex justify-center lg:justify-start pb-24 pr-6 lg:pr-0"
+                className="hidden lg:flex lg:w-auto justify-start pb-28 pr-28"
               >
                 <DisplayCards cards={fuelServiceCards} />
               </motion.div>
@@ -407,7 +459,7 @@ export default function Home() {
                 {["PAY-PER-MEETING", "PROFIT SHARE", "EQUITY"].map((model, i) => (
                   <span
                     key={model}
-                    className="font-black uppercase leading-none"
+                    className="font-semibold uppercase leading-none tracking-[-0.02em]"
                     style={{ fontSize: "clamp(1.2rem,3vw,2.25rem)" }}
                   >
                     {model}
@@ -425,7 +477,7 @@ export default function Home() {
               className="border-t border-black/20 pt-12 flex flex-col md:flex-row items-start md:items-end justify-between gap-10"
             >
               <h2
-                className="font-black uppercase tracking-tight leading-none"
+                className="font-semibold uppercase tracking-[-0.02em] leading-none"
                 style={{ fontSize: "clamp(2rem,5vw,4.5rem)" }}
               >
                 REFINE YOUR<br />MARKET MOTION.
@@ -433,7 +485,7 @@ export default function Home() {
 
               <div className="flex flex-col items-start md:items-end gap-4">
                 <motion.a
-                  href="mailto:donp@fuel-bd.com"
+                  href="mailto:don@fuel-bd.com"
                   className="px-8 py-4 bg-black text-white text-xs font-bold tracking-[0.15em] uppercase border border-black flex items-center gap-2.5"
                   whileHover={{
                     backgroundColor: "#ffffff",
@@ -446,11 +498,11 @@ export default function Home() {
                   <ArrowRight size={13} />
                 </motion.a>
                 <a
-                  href="mailto:donp@fuel-bd.com"
+                  href="mailto:don@fuel-bd.com"
                   className="font-mono text-xs tracking-widest hover:opacity-80 transition-opacity duration-200"
                   style={{ color: "rgba(0,0,0,0.4)" }}
                 >
-                  donp@fuel-bd.com
+                  don@fuel-bd.com
                 </a>
               </div>
             </motion.div>
