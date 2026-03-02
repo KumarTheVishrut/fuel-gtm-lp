@@ -411,9 +411,23 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Right: stacked DisplayCards — desktop only.
-                  Cards are 22rem wide + 96px translate offset; too wide for mobile.
-                  The numbered list above already communicates all four services. */}
+              {/* Mobile: 2×2 card grid */}
+              <motion.div
+                variants={fadeUp}
+                custom={5}
+                className="grid grid-cols-2 gap-px bg-white/10 w-full lg:hidden"
+              >
+                {fuelServiceCards.map((card, i) => (
+                  <div key={i} className="bg-black p-5 border border-white/15 flex flex-col gap-3">
+                    {card.icon && <div className="text-white/45">{card.icon}</div>}
+                    <p className="text-sm font-bold tracking-wider uppercase">{card.title}</p>
+                    <p className="font-mono text-xs text-white/50 leading-relaxed" style={{ textTransform: "none" }}>{card.description}</p>
+                    <p className="font-mono text-xs text-white/25">{card.date}</p>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Desktop: stacked DisplayCards */}
               <motion.div
                 variants={fadeUp}
                 custom={5}
