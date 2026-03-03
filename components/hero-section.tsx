@@ -145,7 +145,7 @@ export function LogosSection() {
 const logos = [
   {
     svg: (
-      <svg width="72" height="72" viewBox="0 0 66 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 66 68" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto">
         <path d="M0.0673828 45.1145V26.5568C0.0673828 23.8272 1.38269 21.2643 3.60129 19.6709L27.6112 2.42687C29.1549 1.31814 31.0081 0.72168 32.9094 0.72168H32.9851C34.9592 0.72168 36.8685 1.33602 38.4593 2.47874C43.7448 6.2754 56.2521 15.2574 62.3985 19.6713C64.6172 21.2646 65.9323 23.8272 65.9323 26.5568V41.4429C65.9323 44.1725 64.6165 46.7349 62.3971 48.3273L38.41 65.5383C36.8333 66.6695 34.941 67.2781 32.9998 67.2781C31.0515 67.2781 29.1528 66.6685 27.5695 65.5345C24.4301 63.286 19.382 59.6608 19.382 59.6608V36.7552C19.382 36.454 19.7233 36.2792 19.9682 36.455L32.7838 45.6581C32.9128 45.7508 33.0868 45.7508 33.2159 45.6581L49.0324 34.3001C49.2378 34.1525 49.2378 33.8472 49.0324 33.6997L33.2159 22.3417C33.0868 22.2489 32.9128 22.2489 32.7838 22.3417L0.653597 45.4147C0.408749 45.5906 0.0673828 45.4158 0.0673828 45.1145Z" fill="white"/>
       </svg>
     ),
@@ -154,8 +154,8 @@ const logos = [
   { src: "https://app.ashbyhq.com/api/images/org-theme-wordmark/85c537e4-cb06-48eb-b1f1-9d7b1d7b977e/d6784893-307b-43a0-a3f0-dd8240890444/28767dd9-0650-494a-8ebb-3fefba32a67b.png", alt: "GovDash Logo" },
   { src: "https://dzh2zima160vx.cloudfront.net/logo/655e18f11661c16ae9c30773428afd08_304_160?Expires=1861920000&Signature=nFnS249edVaQgtOlCHN4OtOsW9tam5I3D1kF-bQrJotFB~QgoqxwdMPIW6DnZElEBzB2S-ZcIQw5ZUqwXdKf-3ahZ47l98XfdzVn0tfhsIh5fWdRvk4eXqRbo0r6Emn~M-TmUOKZdfiHfOW8gymT~gNJ1lPMKcaR-4m~K7Dcdl-G1ZgdX1PkYzyR4lPS572XoI4MCow~Qt0EQ-VH9ETk4wdr~0gabkmM6vhzub0arlXT92rLW3sZy2p8CRQTUSPw1KZp3AejuvrllV3WWrfh-g3bBRBwxLEHKynKfkDD84n7fkME8m2e-1cyWA~Vn8CLg5moNmdOVZuggn-Q~m90jA__&Key-Pair-Id=APKAII5OVX4LZ3WT422Q", alt: "Endeavor Logo", imgClassName: "h-36" },
   { src: "https://group.softbank/media/Project/sbg/sbg/themes/custom/sbg/sbg-logo.svg", alt: "SoftBank Logo" },
-  { src: "https://mma.prnewswire.com/media/2106994/drivepoint_logo_primary_Logo.jpg", alt: "Drivepoint Logo" },
-  { src: "https://media.licdn.com/dms/image/v2/D4E0BAQHlOVyBe6zDNA/company-logo_200_200/B4EZlMDXb9GUAI-/0/1757917575361/findarbor_logo?e=1773878400&v=beta&t=OQhFbDF5KEHHkN84x0TEH0Z3NE6yj6rRCn-ZtAR5s4k", alt: "Arbor Logo" },
+  { src: "https://cdn.prod.website-files.com/67de1670e80b3bf80d1e454d/67de1670e80b3bf80d1e4570_Logo%20Colour%3DBlack.svg", alt: "Drivepoint Logo", imgClassName: "h-8 w-auto" },
+  { src: "https://cdn.prod.website-files.com/6979759b53e7336c4f53146c/6979d7e9870fa6acde309344_Frame%2010.svg", alt: "Arbor Logo", imgClassName: "h-8 w-auto" },
   { src: "https://www.siriusxm.com/content/dam/sxm-com/corporate/corp-com/media-assets/brand-logo---icons/SiriusXM%20WORDMARK%20BLACK%20RGB.png", alt: "SiriusXM Logo" },
   { src: "https://mma.prnewswire.com/media/2649780/CHORD_Logo.jpg", alt: "Chord Logo" },
 
